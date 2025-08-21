@@ -1,0 +1,34 @@
+void main() {
+  final Map<String, dynamic> ApiData ={
+    'nombre':'Samuel',
+    'apellido':'Lora',
+    'edad':20
+  };
+ 
+
+}
+
+
+class Persona{
+  String nombre='';
+  String apellido='';
+  int edad=0;
+
+
+  Persona(String nombre, String apellido, int edad){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+
+    
+
+  Persona.ApiData(Map<String, dynamic> datos)
+    :nombre = datos['nombre'] ?? 'No se registró un nombre.',
+     apellido = datos['apellido'] ?? 'No se registró un apellido',
+     edad = datos['edad'] ?? 'No se registró una edad';
+  
+    
+  }
+
+}
+
